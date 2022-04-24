@@ -29,7 +29,7 @@ $sliderData = " <div class='carousel-item active'>
                                     <h6 class='tag-cover-9'> <i class='fa fa-calendar'> </i> ". date_format(date_create($eBanner['StartDate']), 'F d, Y')."</h6>
                                     <h3 class='title-cover-9'>$eBanner[EventName]</h3>
                                     <p class='para-cover-9'><span class='d-none d-lg-block mb-4'>$eBanner[ShortDescription]<span></p>
-                                    <a href='product-single.php?pid=$eBanner[EM_Id]' class='btnmy' style='border-radius: 10px; background-color:#cd9c50;color:#ffffff'>BUY TICKET </a>
+                                    <a href='bookings.php?source=$eBanner[EM_Id]' class='btnmy' style='border-radius: 10px; background-color:#cd9c50;color:#ffffff'>BUY TICKET </a>
                                 </div>
                             </div>";
         }

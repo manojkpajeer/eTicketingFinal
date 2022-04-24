@@ -41,7 +41,7 @@
   <body onload="window.print();">
   <script>
         window.onafterprint = function(event) {
-            location.href="manage-badge.php?eid=<?php echo $_GET['eid']; ?>";
+            location.href="manage-badge.php?eid=<?php echo $_GET['eid']; ?>&ecode=<?php echo $_GET['ecode']; ?>";
         };
   </script>
       <div class="container-fluid">

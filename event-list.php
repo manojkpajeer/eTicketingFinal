@@ -35,7 +35,7 @@
 					<div class="blg-tp">
 						<div class="column nine-blog">
 							<div class="box13">
-								<a href="product-single.php?pid=<?php echo $eResult['EM_Id'];?>"><img class="side-img" src="<?php echo './superadmin/' . $eResult['Image1'];?>" alt="" /></a>
+								<a href="bookings.php?source=<?php echo $eResult['EM_Id'];?>"><img class="side-img" src="<?php echo './superadmin/' . $eResult['Image1'];?>" alt="" /></a>
 							</div>
 						</div>
 						<div class="column two ten-blog">
@@ -54,12 +54,12 @@
                                         }
                                     ?>
                                 </h4>
-								<h3><a href="product-single.php?pid=<?php echo $eResult['EM_Id'];?>"><?php echo $eResult['EventName']; ?></a></h3>
+								<h3><a href="bookings.php?source=<?php echo $eResult['EM_Id'];?>"><?php echo $eResult['EventName']; ?></a></h3>
 								<ul class="admin-list">
 									<li><a href="#"><span class="fa fa-calendar" aria-hidden="true"></span><?php echo date_format(date_create($eResult['StartDate']), 'M d, Y'); ?></a></li>
 								</ul>
 								<p><?php echo $eResult['ShortDescription']; ?>.</p>
-										<div class="button"><a href="product-single.php?pid=<?php echo $eResult['EM_Id'];?>" class="actionbg btn">View More <span
+										<div class="button"><a href="bookings.php?source=<?php echo $eResult['EM_Id'];?>" class="actionbg btn">View More <span
 											class="fa fa-long-arrow-right" aria-hidden="true"></span></a></div>
                             </div>
 						</div>

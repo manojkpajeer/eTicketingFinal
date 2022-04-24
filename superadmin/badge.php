@@ -114,7 +114,7 @@
                 echo "<script>alert('Yay, Badge added successfully..');</script>";
             }
         } catch (Exception $e) {
-            echo "<script>alert(Yay, Badge added successfully..');</script>";
+            echo "<script>alert('Yay, Badge added successfully..');</script>";
         }
     }
 ?>
@@ -160,7 +160,7 @@
                                                 $copyData = $_SERVER['SERVER_NAME'] . "/bdgdxb.php?pref=".$rowd6['EM_Id'];
                                                 $eid = $rowd6['EM_Id'];
                                                 ?>
-                                                <a href="../bdgdxb.php?pref=<?php echo $rowd6['EM_Id']?>"><i class='fa fa-link'></i></span>
+                                                <a href="../badge.php?pref=<?php echo $rowd6['EM_Id']?>"><i class='fa fa-link'></i></span>
                                                 <?php
                                                 echo "</td>";
                                                 echo "</tr>"; 
@@ -711,7 +711,7 @@
                                                                             <label class="form-label">Ticket</label>
                                                                             <select name="ticketchoose" class="form-control input-style" required>
                                                                                 <?php
-                                                                                    $resTicket = mysqli_query($conn, "SELECT * FROM ticket_master WHERE Status = 1");
+                                                                                    $resTicket = mysqli_query($conn, "SELECT * FROM ticket_master");
                                                                                     if(mysqli_num_rows($resTicket) > 0) {
 
                                                                                         while($rowTicket =  mysqli_fetch_assoc($resTicket)){

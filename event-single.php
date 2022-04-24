@@ -24,7 +24,7 @@
 					<div class="galleryContainer">
 						<div class="gallery">
 							<input type="radio" name="controls" id="c1" checked><img class="galleryImage" id="i1"
-								src="./admin/<?php echo $eProducts['BannerImage']?>" class="img img-responsive" alt="">
+								src="./superadmin/<?php echo $eProducts['BannerImage']?>" class="img img-responsive" alt="">
 						</div>
 					</div>
 				</div>

@@ -117,7 +117,8 @@
                                                 ?>
                                                 <a href="view-agent-sales-report.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-clipboard"></i></a> | 
                                                 <a href="view-agent-sales-ticket.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-ticket"></i></a> | 
-                                                <a href="view-agent-sales-barcode.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-barcode"></i></a>
+                                                <a href="view-agent-sales-barcode.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-barcode"></i></a> |
+                                                <a href="view-agent-sales-qrcode.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-qrcode"></i></a>
                                                 <?php
                                                 
                                                 echo "</td>";

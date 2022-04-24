@@ -131,9 +131,10 @@
                                                 ?>
                                                 <a href="#" data-toggle="modal" data-target="#product<?php echo $rowd6['BD_Id'];?>"><i class='fa fa-pencil'></i></a> | 
                                                 <a href="manage-badge.php?eid=<?php echo $_GET['eid'];?>&did=<?php echo $rowd6['BD_Id'];?>" onClick="return confirm('Are you sure you want to delete?')"><i class="fa fa-trash"></i></a> | 
-                                                <a href="print-badge.php?pid=<?php echo $rowd6['BD_Id'];?>&eid=<?php echo $_GET['eid'];?>"><i class="fa fa-print"></i></a> | 
-                                                <a href="print-badge-designation.php?pid=<?php echo $rowd6['BD_Id'];?>&eid=<?php echo $_GET['eid'];?>"><i class="fa fa-clipboard"></i></a> |
-                                                <a href="print-barcode.php?bid=<?php echo $rowd6['BarcodeNo'];?>&eid=<?php echo $_GET['eid'];?>&ecode=<?php echo $_GET['ecode'];?>"><i class="fa fa-barcode"></i></a>
+                                                <a href="print-badge.php?pid=<?php echo $rowd6['BD_Id'];?>&eid=<?php echo $_GET['eid'];?>&ecode=<?php echo $_GET['ecode'];?>"><i class="fa fa-print"></i></a> | 
+                                                <a href="print-badge-designation.php?pid=<?php echo $rowd6['BD_Id'];?>&eid=<?php echo $_GET['eid'];?>&ecode=<?php echo $_GET['ecode'];?>"><i class="fa fa-clipboard"></i></a> |
+                                                <a href="print-barcode.php?bid=<?php echo $rowd6['BarcodeNo'];?>&eid=<?php echo $_GET['eid'];?>&ecode=<?php echo $_GET['ecode'];?>"><i class="fa fa-barcode"></i></a> | 
+                                                <a href="print-qrcode.php?bid=<?php echo $rowd6['BarcodeNo'];?>&eid=<?php echo $_GET['eid'];?>&ecode=<?php echo $_GET['ecode'];?>"><i class="fa fa-qrcode"></i></a>
                                                 <?php
                                                 echo "</td>";
                                                 echo "</tr>"; 
@@ -754,7 +755,7 @@
                 </div>
             </div>
         </div>
-        <a href='print-badge-all.php?eid=<?php echo $_GET['eid']; ?>' class="btn btn-danger" style="position:fixed;bottom:40px;right:40px;border-radius:50px;text-align:center;"><i class="fa fa-print"></i></a>
+        <a href='print-badge-all.php?eid=<?php echo $_GET['eid']; ?>&ecode=<?php echo $_GET['ecode']; ?>' class="btn btn-danger" style="position:fixed;bottom:40px;right:40px;border-radius:50px;text-align:center;"><i class="fa fa-print"></i></a>
     </div>
 </div>
 

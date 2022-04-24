@@ -26,7 +26,7 @@
         if (!empty($_FILES['event_banner']['name'])) {
 
             $path = "event-image/" .time() . rand(1000, 9999) . "." . pathinfo($_FILES['event_banner']['name'], PATHINFO_EXTENSION);
-            if (move_uploaded_file($_FILES['event_banner']['tmp_name'], $path)) {
+            if (move_uploaded_file($_FILES['event_banner']['tmp_name'], "../superadmin/".$path)) {
             
                 $path_banner = $path;
             }
@@ -35,7 +35,7 @@
         if (!empty($_FILES['image1']['name'])) {
 
             $path1 = "event-image/" .time() . rand(1000, 9999) . "." . pathinfo($_FILES['image1']['name'], PATHINFO_EXTENSION);
-            if (move_uploaded_file($_FILES['image1']['tmp_name'], $path1)) {
+            if (move_uploaded_file($_FILES['image1']['tmp_name'], "../superadmin/".$path1)) {
             
                 $image1 = $path1;
             }
@@ -44,7 +44,7 @@
         if (!empty($_FILES['image2']['name'])) {
 
             $path2 = "event-image/" .time() . rand(1000, 9999) . "." . pathinfo($_FILES['image2']['name'], PATHINFO_EXTENSION);
-            if (move_uploaded_file($_FILES['image2']['tmp_name'], $path2)) {
+            if (move_uploaded_file($_FILES['image2']['tmp_name'], "../superadmin/".$path2)) {
             
                 $image2 = $path2;
             }
@@ -53,7 +53,7 @@
         if (!empty($_FILES['image3']['name'])) {
 
             $path3 = "event-image/" .time() . rand(1000, 9999) . "." . pathinfo($_FILES['image3']['name'], PATHINFO_EXTENSION);
-            if (move_uploaded_file($_FILES['image3']['tmp_name'], $path3)) {
+            if (move_uploaded_file($_FILES['image3']['tmp_name'], "../superadmin/".$path3)) {
             
                 $image3 = $path3;
             }
@@ -110,7 +110,7 @@
                                                 
                                                 echo "<tr>"; 
                                                 echo "<th>".$count."</th>"; 
-                                                echo "<td> <img src='".$rowd6['EventBanner']."' class='rounded-circle mr-2' width='40px' alt=''></td>"; 
+                                                echo "<td> <img src='../superadmin/".$rowd6['EventBanner']."' class='rounded-circle mr-2' width='40px' alt=''></td>"; 
                                                 echo "<td>".$rowd6['EventName']."</td>"; 
                                                 echo "<td>".$rowd6['EventCode']."</td>"; 
                                                 echo "<td>".date_format(date_create($rowd6['StartDate']), 'd M, Y') . "</td>"; 

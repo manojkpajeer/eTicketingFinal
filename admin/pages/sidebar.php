@@ -31,6 +31,7 @@
                 </li>
 
                 <li class="<?php if ($_SERVER['REQUEST_URI'] == '/staff/view-barcode.php'){ echo 'active'; }?>"><a href="./view-barcode.php"><i class="fa fa-barcode"></i> <span>Manage Barcode</span></a></li>
+                <li class="<?php if ($_SERVER['REQUEST_URI'] == '/staff/view-qrcode.php'){ echo 'active'; }?>"><a href="./view-qrcode.php"><i class="fa fa-qrcode"></i> <span>Manage QR Code</span></a></li>
                                
                 <li class="menu-list <?php if ($_SERVER['REQUEST_URI'] == '/staff/before-event.php' || $_SERVER['REQUEST_URI'] == '/staff/after-event.php' || $_SERVER['REQUEST_URI'] == '/staff/event-report.php'){ echo 'active'; }?>">
                     <a href="#"><i class="fa fa-clipboard"></i>
@@ -47,7 +48,7 @@
                 
                 <li class="menu-list <?php if ($_SERVER['REQUEST_URI'] == '/staff/add-ticket.php' || $_SERVER['REQUEST_URI'] == '/staff/manage-ticket.php'){ echo 'active'; }?>">
                     <a href="#"><i class="fa fa-plus"></i>
-                        <span>Ticket Type <i class="lnr lnr-chevron-right"></i></span>
+                        <span>Badge Type <i class="lnr lnr-chevron-right"></i></span>
                     </a>
                     <ul class="sub-menu-list">
                         <li><a href="add-ticket.php">Add Type</a> </li>

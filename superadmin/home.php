@@ -28,26 +28,30 @@
                     <div class="row">
                         <div class="col-sm-6 pr-sm-2 statistics-grid">
                             <div class="card card_border border-primary-top p-4">
-                                <i class="lnr lnr-users" style="color: blue;"> </i>
-                                <h3 class="text-primary number">
-                                    <?php
-                                        $resd1 = mysqli_query($conn, "SELECT CM_Id FROM customer_master WHERE CustomerStatus = 1");
-                                        echo mysqli_num_rows($resd1);
-                                    ?>
-                                </h3>
-                                <p class="stat-text">Active Customers</p>
+                                <a href="customer-list.php">
+                                    <i class="lnr lnr-users" style="color: blue;"> </i>
+                                    <h3 class="text-primary number">
+                                        <?php
+                                            $resd1 = mysqli_query($conn, "SELECT CM_Id FROM customer_master WHERE CustomerStatus = 1");
+                                            echo mysqli_num_rows($resd1);
+                                        ?>
+                                    </h3>
+                                    <p class="stat-text">Active Customers</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-sm-6 pl-sm-2 statistics-grid">
                             <div class="card card_border border-primary-top p-4">
-                                <i class="lnr lnr-user" style="color: grey;"> </i>
-                                <h3 class="text-secondary number">
-                                    <?php
-                                        $resd2 = mysqli_query($conn, "SELECT AJM_Id FROM ajent_master WHERE AjentStatus = 1");
-                                        echo mysqli_num_rows($resd2);
-                                    ?>
-                                </h3>
-                                <p class="stat-text">Active Agents</p>
+                                <a href="manage-agent.php">
+                                    <i class="lnr lnr-user" style="color: grey;"> </i>
+                                    <h3 class="text-secondary number">
+                                        <?php
+                                            $resd2 = mysqli_query($conn, "SELECT AJM_Id FROM ajent_master WHERE AjentStatus = 1");
+                                            echo mysqli_num_rows($resd2);
+                                        ?>
+                                    </h3>
+                                    <p class="stat-text">Active Agents</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -56,26 +60,30 @@
                     <div class="row">
                         <div class="col-sm-6 pr-sm-2 statistics-grid">
                             <div class="card card_border border-primary-top p-4">
-                                <i class="lnr lnr-calendar-full" style="color: green;"> </i>
-                                <h3 class="text-success number">
-                                    <?php
-                                        $resd3 = mysqli_query($conn, "SELECT EM_Id FROM event_master WHERE EventStatus = 'Publish' AND BookingStatus = true");
-                                        echo mysqli_num_rows($resd3);
-                                    ?>
-                                </h3>
-                                <p class="stat-text">Active Events</p>
+                                <a href="events.php">
+                                    <i class="lnr lnr-calendar-full" style="color: green;"> </i>
+                                    <h3 class="text-success number">
+                                        <?php
+                                            $resd3 = mysqli_query($conn, "SELECT EM_Id FROM event_master WHERE EventStatus = 'Publish' AND BookingStatus = true");
+                                            echo mysqli_num_rows($resd3);
+                                        ?>
+                                    </h3>
+                                    <p class="stat-text">Active Events</p>
+                                </a>
                             </div>
                         </div>
                         <div class="col-sm-6 pl-sm-2 statistics-grid">
                             <div class="card card_border border-primary-top p-4">
-                                <i class="lnr lnr-cart" style="color: red;"> </i>
-                                <h3 class="text-danger number">
-                                    <?php
-                                        $resd4 = mysqli_query($conn, "SELECT SM_Id FROM sales_master WHERE SalesStatus = 1 AND DATE(DateCreate) = CURDATE() ");
-                                        echo mysqli_num_rows($resd4);
-                                    ?>
-                                </h3>
-                                <p class="stat-text">Today's Sales</p>
+                                <a href="sales.php">
+                                    <i class="lnr lnr-cart" style="color: red;"> </i>
+                                    <h3 class="text-danger number">
+                                        <?php
+                                            $resd4 = mysqli_query($conn, "SELECT SM_Id FROM sales_master WHERE SalesStatus = 1 AND DATE(DateCreate) = CURDATE() ");
+                                            echo mysqli_num_rows($resd4);
+                                        ?>
+                                    </h3>
+                                    <p class="stat-text">Today's Sales</p>
+                                </a>
                             </div>
                         </div>
                     </div>

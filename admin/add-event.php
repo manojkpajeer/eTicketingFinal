@@ -32,16 +32,16 @@
 
             $path_banner = "event-image/" .time() . rand(1000, 9999) . "." . pathinfo($_FILES['event_banner']['name'], PATHINFO_EXTENSION);
 
-            if (move_uploaded_file($_FILES['event_banner']['tmp_name'], $path_banner)) {
+            if (move_uploaded_file($_FILES['event_banner']['tmp_name'], "../superadmin/".$path_banner)) {
 
                 $path_image1 = "event-image/" .time() . rand(1000, 9999) . "." . pathinfo($_FILES['image1']['name'], PATHINFO_EXTENSION);
-                move_uploaded_file($_FILES['image1']['tmp_name'], $path_image1);
+                move_uploaded_file($_FILES['image1']['tmp_name'], "../superadmin/".$path_image1);
 
                 $path_image2 = "event-image/" .time() . rand(1000, 9999) . "." . pathinfo($_FILES['image2']['name'], PATHINFO_EXTENSION);
-                move_uploaded_file($_FILES['image2']['tmp_name'], $path_image2);
+                move_uploaded_file($_FILES['image2']['tmp_name'], "../superadmin/".$path_image2);
 
                 $path_image3 = "event-image/" .time() . rand(1000, 9999) . "." . pathinfo($_FILES['image3']['name'], PATHINFO_EXTENSION);
-                move_uploaded_file($_FILES['image3']['tmp_name'], $path_image3);
+                move_uploaded_file($_FILES['image3']['tmp_name'], "../superadmin/".$path_image3);
 
                 $eventOn = $_POST['start_date']." ".$_POST['start_time'];
 

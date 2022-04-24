@@ -45,7 +45,7 @@
                 <li class="<?php if ($_SERVER['REQUEST_URI'] == '/admin/return-order.php'){ echo 'active'; }?>"><a href="./return-order.php"><i class="fa fa-undo"></i> <span>Return Order</span></a></li>
 
                 <li class="<?php if ($_SERVER['REQUEST_URI'] == '/admin/view-barcode.php'){ echo 'active'; }?>"><a href="./view-barcode.php"><i class="fa fa-barcode"></i> <span>Manage Barcode</span></a></li>
-                               
+                <li class="<?php if ($_SERVER['REQUEST_URI'] == '/staff/view-qrcode.php'){ echo 'active'; }?>"><a href="./view-qrcode.php"><i class="fa fa-qrcode"></i> <span>Manage QR Code</span></a></li>
                 <li class="menu-list <?php if ($_SERVER['REQUEST_URI'] == '/admin/before-event.php' || $_SERVER['REQUEST_URI'] == '/admin/after-event.php' || $_SERVER['REQUEST_URI'] == '/admin/event-report.php'){ echo 'active'; }?>">
                     <a href="#"><i class="fa fa-clipboard"></i>
                         <span>Event Report <i class="lnr lnr-chevron-right"></i></span>
@@ -61,7 +61,7 @@
                 
                 <li class="menu-list <?php if ($_SERVER['REQUEST_URI'] == '/admin/add-ticket.php' || $_SERVER['REQUEST_URI'] == '/admin/manage-ticket.php'){ echo 'active'; }?>">
                     <a href="#"><i class="fa fa-plus"></i>
-                        <span>Ticket Type <i class="lnr lnr-chevron-right"></i></span>
+                        <span>Badge Type <i class="lnr lnr-chevron-right"></i></span>
                     </a>
                     <ul class="sub-menu-list">
                         <li><a href="add-ticket.php">Add Type</a> </li>

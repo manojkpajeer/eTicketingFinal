@@ -46,19 +46,22 @@
             };
     </script>
         <div class="container-fluid">
-            <div class="row p-3">
         <?php
             $resBar = mysqli_query($conn, "SELECT Barcode FROM barcode_master WHERE OrderId = '$_GET[oid]'");
             if(mysqli_num_rows($resBar)>0){
         
                 while ($rowBar = mysqli_fetch_assoc($resBar)) {
                     ?>
-                        <div class="col-4 my-2">
-                            <?php 
-                                echo $generator->getBarcode($rowBar['Barcode'], $generator::TYPE_CODE_128);
-                                echo "<small style='font-size:10px;'>$rowBar[Barcode]</small>";
-                            ?>
-                        </div>
+                       <div class="row p-3" style="page-break-after: always;">
+                            <div class="col-4 mt-4" >
+                                <?php 
+                                    echo $generator->getBarcode($rowBar['Barcode'], $generator::TYPE_CODE_128);
+                                    echo "<small style='font-size:10px;letter-spacing: 11px;'>$rowBar[Barcode]</small>";
+                                ?>
+                            </div>
+                            <div class="col-4"></div>
+                            <div class="col-4"></div>
+                    </div>
                     <?php
 
                 }
@@ -67,7 +70,6 @@
                 echo "<script>alert('Oops, Unable to process..');location.href='agent-sales-data.php?id=".$_GET['id'].";</script>";
             }
         ?>
-      </div>
         </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>

@@ -118,7 +118,8 @@
                                                 ?>
                                                 <a href="view-sales-report.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-clipboard"></i></a> | 
                                                 <a href="view-sales-ticket.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-ticket"></i></a> | 
-                                                <a href="view-sales-barcode.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-barcode"></i></a>
+                                                <a href="view-sales-barcode.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-barcode"></i></a> |
+                                                <a href="view-sales-qrcode.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $orderId;?>"><i class="fa fa-qrcode"></i></a>
                                                 <?php
                                                 
                                                 echo "</td>";

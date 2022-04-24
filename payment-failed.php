@@ -23,6 +23,8 @@
   <h1>Your transaction was canceled!</h1>
 
 	<?php
+
+		session_start();
 		include './config/connection.php';
 
 		if(isset($_GET['uid'])) {

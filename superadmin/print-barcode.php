@@ -45,7 +45,7 @@
   <script>
         window.onafterprint = function(event) {
             var eids = '<?php echo $eid;?>';
-            var ecodes = '<?php echo $eid;?>';
+            var ecodes = '<?php echo $ecode;?>';
             location.href="manage-badge.php?eid="+eids+"&ecode="+ecodes;
         };
   </script>
@@ -66,7 +66,7 @@
                     }   
                 } else {
 
-                    echo "<script>alert('Oops, unable to process..');location.href='view-barcode.php';</script>";
+                    echo "<script>alert('Oops, unable to process..');location.href='manage-badge.php?eid=$eid&ecode=$ecode';</script>";
                 }
                 ?>
             </div>

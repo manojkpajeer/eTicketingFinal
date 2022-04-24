@@ -160,10 +160,10 @@
                     echo "<script>alert('Oops, Tickets not available..');</script>";
                 }
             } else {
-                echo "<script>alert('Oops, Kindly login to proceed..');location.href='login.php';</script>";
+                echo "<script>location.href='login.php';</script>";
             }
         } else {
-            echo "<script>alert('Oops, Kindly login to proceed..');location.href='login.php';</script>";
+            echo "<script>location.href='login.php';</script>";
         }
     }
     

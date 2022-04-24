@@ -14,6 +14,17 @@
     require_once './pages/link.php';
     require_once './pages/sidebar.php';
     require_once './pages/header.php';
+
+    if (isset($_GET['did'])) {
+        
+        if (mysqli_query($conn, "DELETE FROM contact_master WHERE CM_Id = '$_GET[did]'")){
+
+            echo "<script>alert('Yay, Query deleted successfully..');location.href='queries.php';</script>";     
+        } else {
+
+            echo "<script>alert('Oops, Unable to delete query.');</script>";
+        }
+    }
 ?>
 
 <div class="main-content">
@@ -33,6 +44,7 @@
                                         <th>Subject</th>
                                         <th>Message</th>
                                         <th>Date</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,6 +62,11 @@
                                                 echo "<td>".$rowd6['Subject']."</td>"; 
                                                 echo "<td>".$rowd6['Message']."</td>"; 
                                                 echo "<td>".date_format(date_create($rowd6['DateCreate']), 'd M, Y') . "</td>"; 
+                                                echo "<td>";
+                                                ?>
+                                                <a href="queries.php?did=<?php echo $rowd6['CM_Id'];?>" onClick="return confirm('Are you sure you want to delete?')"><i class="fa fa-trash"></i></a>
+                                                <?php
+                                                echo "</td>";
                                                 echo "</tr>"; 
 
                                                 $count++;
@@ -63,6 +80,7 @@
                 </div>
             </div>
         </div>
+        <a href='print-queries.php' class="btn btn-danger" style="position:fixed;bottom:40px;right:40px;border-radius:50px;text-align:center;"><i class="fa fa-print"></i></a>
     </div>
 </div>
 

@@ -94,7 +94,7 @@
                 $message .= "<strong>Event Categories: </strong><br>";
                 while($rowCat = mysqli_fetch_assoc($resCat)){
 
-                    $message .= "<strong>Price</strong> ".$rowCat['Price'] . "\t<strong>Category Name</strong> ".$rowCat['CategoryName'] . "\t<strong>Capacity</strong> ".$rowCat['Capacity'] . "\t<strong>Total</strong> ".$rowCat['Total']."<br>";
+                    $message .= "<strong>Price</strong> ".number_format($rowCat['Price'], 2) . "\t<strong>Category Name</strong> ".$rowCat['CategoryName'] . "\t<strong>Capacity</strong> ".$rowCat['Capacity'] ."<br>";
                 }
             }
         }
@@ -106,7 +106,7 @@
             $mail->Host       = 'smtp.zoho.com';                    
             $mail->SMTPAuth   = true;                                  
             $mail->Username   = 'support@dxbtickets.com';                    
-            $mail->Password   = 'Sujipri@28';                               
+            $mail->Password   = 'Sujith104';                               
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;           
             $mail->Port       = 465;                                  
         
@@ -131,7 +131,7 @@
             $mail->Host       = 'smtp.zoho.com';                    
             $mail->SMTPAuth   = true;                                  
             $mail->Username   = 'support@dxbtickets.com';                    
-            $mail->Password   = 'Sujipri@28';                               
+            $mail->Password   = 'Sujith104';                               
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;           
             $mail->Port       = 465;                                  
         
@@ -195,7 +195,7 @@ form{
 
                             <div class="col-md-6">
                                 <small>Organizer Name <span class="text-danger">*</span></small>
-                                <input type="text" class="form-control form-control-sm" style="border: 1px solid #cd9c50;" name="organizer_name" pattern="[A-Za-z]{1,100}" maxlength="100" required>
+                                <input type="text" class="form-control form-control-sm" style="border: 1px solid #cd9c50;" name="organizer_name" maxlength="100" required>
                                 <div class="invalid-feedback">
                                     <small>Enter valid organizer name</small>
                                 </div>

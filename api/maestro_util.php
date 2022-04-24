@@ -11,7 +11,7 @@ class MaestroUtil {
 
     function __construct() {
         // $this->conn = mysqli_connect('localhost', 'EcommerceUser', 'r39LkPP)MAVyyk&}', 'eticketing');
-        $this->conn = mysqli_connect('localhost', 'root', '', 'eticketing');
+        $this->conn = mysqli_connect('localhost', 'EcommerceUser', 'r39LkPP)MAVyyk&}', 'eticketing');
     }
     
     public function getAuthToken() {

@@ -60,7 +60,7 @@
             $mail->Host       = 'smtp.zoho.com';                    
             $mail->SMTPAuth   = true;                                  
             $mail->Username   = 'support@dxbtickets.com';                    
-            $mail->Password   = 'Sujipri@28';                               
+            $mail->Password   = 'Sujith104';                               
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;           
             $mail->Port       = 465;                                  
         

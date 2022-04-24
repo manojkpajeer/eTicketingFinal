@@ -116,13 +116,13 @@
                                                                                         <div class="col-3 text-right mb-2"><strong>Price</strong></div>
 
                                                                                         <?php
-                                                                                        $count=1;
+                                                                                        $counts=1;
                                                                                         while($rowcat = mysqli_fetch_assoc($rescat)){
-                                                                                            echo "<div class='col-1'>$count</div>
+                                                                                            echo "<div class='col-1'>$counts</div>
                                                                                             <div class='col-5'>$rowcat[CategoryName]</div>
                                                                                             <div class='col-3'>$rowcat[Capacity]</div>
                                                                                             <div class='col-3 text-right'>".number_format($rowcat['Price'], 2)."</div>";
-                                                                                            $count ++;
+                                                                                            $counts ++;
                                                                                         }
                                                                                         ?>
                                                                                         </div>

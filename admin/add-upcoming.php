@@ -19,7 +19,7 @@
 
         $path_banner = "upcoming-image/" .time() . "." . pathinfo($_FILES['event_banner']['name'], PATHINFO_EXTENSION);
 
-        if (move_uploaded_file($_FILES['event_banner']['tmp_name'], $path_banner)) {
+        if (move_uploaded_file($_FILES['event_banner']['tmp_name'], "../superadmin/".$path_banner)) {
             
             if(mysqli_query($conn, "INSERT INTO upcoming_event(EventName, StartDate, StartTime, EndDate, EndTime, 
                 EventLocation, AgeLimit, Organizer, EventStatus, DateCreate, BannerImage, ShortDescription, 

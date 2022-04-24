@@ -3,7 +3,7 @@
 
     <!--footer section start-->
     <footer class="dashboard">
-        <p>&copy 2022 DXB Tockets. All Rights Reserved.</p>
+        <p>&copy 2022 DXB Tickets. All Rights Reserved.</p>
     </footer>
     
     <!-- move top -->

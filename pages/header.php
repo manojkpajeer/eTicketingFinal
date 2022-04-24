@@ -32,7 +32,7 @@
                                     <?php
                                     while ($eventData = mysqli_fetch_assoc($headerEvents)) {
                                         ?>
-                                            <li style="width: 250px;"><a href="product-single.php?pid=<?php echo $eventData['EM_Id'];?>" class="drop-text"><?php echo $eventData['EventName'];?></a></li>
+                                            <li style="width: 250px;"><a href="bookings.php?source=<?php echo $eventData['EM_Id'];?>" class="drop-text"><?php echo $eventData['EventName'];?></a></li>
                                         <?php
                                     }
                                     ?>

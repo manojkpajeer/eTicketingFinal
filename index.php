@@ -166,11 +166,11 @@
                                 ?>
 
                                     <div class="product card h-100">
-                                        <a href="product-single.php?pid=<?php echo $eResult['EM_Id'];?>"><img src="<?php if (empty($eResult['Image1'])) { echo './superadmin/event-image/product-preview.png'; } else { echo './superadmin/' . $eResult['Image1']; }?>" class="img-responsive" alt="" style="height: 275px;"></a>
+                                        <a href="bookings.php?source=<?php echo $eResult['EM_Id'];?>"><img src="<?php if (empty($eResult['Image1'])) { echo './superadmin/event-image/product-preview.png'; } else { echo './superadmin/' . $eResult['Image1']; }?>" class="img-responsive" alt="" style="height: 275px;"></a>
                                         <div class="info-bg">
                                             
                                             <ul class="d-flex">
-                                                <li><h5><a href="product-single.php?pid=<?php echo $eResult['EM_Id'];?>"><?php echo $eResult['EventName']; ?></a></h5></li>
+                                                <li><h5><a href="bookings.php?source=<?php echo $eResult['EM_Id'];?>"><?php echo $eResult['EventName']; ?></a></h5></li>
                                                 <li class="margin-effe"><?php echo date_format(date_create($eResult['StartDate']), 'M-d'); ?></li>
                                             </ul>
                                             
@@ -625,7 +625,7 @@
                                             ?>
                                             <li class="cd-cart__product">
                                                 <div class="cd-cart__details">
-                                                    <h3 class="truncate"><a href="product-single.php?pid=<?php echo $resCartItem['EM_Id'];?>"><?php echo $resCartItem['EventName'];?></a></h3>
+                                                    <h3 class="truncate"><a href="bookings.php?source=<?php echo $resCartItem['EM_Id'];?>"><?php echo $resCartItem['EventName'];?></a></h3>
 
                                                     <span class="cd-cart__price"><?php echo number_format($itemPrice, 2) . " AED";?></span>
                                                     

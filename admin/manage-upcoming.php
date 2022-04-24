@@ -32,7 +32,7 @@
             
             $imagePath = "upcoming-image/" .time(). "." . pathinfo($_FILES['event_banner']['name'], PATHINFO_EXTENSION);
 
-            if (move_uploaded_file($_FILES['event_banner']['tmp_name'], $imagePath)) {
+            if (move_uploaded_file($_FILES['event_banner']['tmp_name'], "../superadmin/".$imagePath)) {
 
                 if (mysqli_query($conn, "UPDATE upcoming_event SET EventName = '$_POST[event_name]', StartDate = '$_POST[start_date]',
                 StartTime = '$_POST[start_time]', EndDate = '$_POST[end_date]', EndTime = '$_POST[end_time]', 
@@ -96,7 +96,7 @@
                                                 
                                                 echo "<tr>"; 
                                                 echo "<th>".$count."</th>"; 
-                                                echo "<td> <img src='".$rowd6['BannerImage']."' class='rounded-circle mr-2' width='40px' alt=''></td>"; 
+                                                echo "<td> <img src='../superadmin/".$rowd6['BannerImage']."' class='rounded-circle mr-2' width='40px' alt=''></td>"; 
                                                 echo "<td>".$rowd6['EventName']."</td>"; 
                                                 echo "<td>".date_format(date_create($rowd6['StartDate']), 'd M, Y') . "</td>"; 
                                                 echo "<td>".$rowd6['EventLocation']."</td>"; 

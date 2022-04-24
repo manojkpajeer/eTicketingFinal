@@ -51,7 +51,7 @@
                                                 
                                                 echo "<tr>"; 
                                                 echo "<th>".$count."</th>"; 
-                                                echo "<td> <img src='../admin/".$rowd6['EventBanner']."' class='rounded-circle mr-2' width='40px' alt=''></td>"; 
+                                                echo "<td> <img src='../superadmin/".$rowd6['EventBanner']."' class='rounded-circle mr-2' width='40px' alt=''></td>"; 
                                                 echo "<td>".$rowd6['EventName']."</td>"; 
                                                 echo "<td>".$rowd6['EventLocation']."</td>"; 
                                                 echo "<td>".date_format(date_create($rowd6['StartDate']), 'd M, Y') . "</td>"; 

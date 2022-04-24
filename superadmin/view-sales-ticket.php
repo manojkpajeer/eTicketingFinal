@@ -72,16 +72,23 @@
 
                     ?>
                         <div class="row mt-2 p-2">
-                            <div class="col-4" style="font-size: 12px;">
+                        <div class="col-4 row" style="font-size: 12px;">
+                            <div class="col-8">
                                 <span><strong><?php echo $resEve['EventName'];?></strong> </span><br>
                                 <span>Category </span><br>
                                 <span><strong><?php echo $resCat['PriceCategoryName'];?></strong></span><br>
                                 <span>
                                 DTCM : <?php echo $rowBar['Barcode'];?>
+                                </span>
                                 <br><br><br>
+                            </div>
+                            <div class="col-4 text-center">
+                            <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?php echo $rowBar['Barcode'];?>&choe=UTF-8" title="DXB Tickets" height="80" width="80"/>
+                            </div>
+                                <span>
                                 <?php 
                                     echo $generator->getBarcode($rowBar['Barcode'], $generator::TYPE_CODE_128);
-                                    echo "<small>$rowBar[Barcode]</small>";
+                                    echo "<small class='mt-1'>$rowBar[Barcode]</small>";
                                 ?>
                                 </span>
                             </div>
@@ -92,19 +99,17 @@
                                 <span><strong><?php echo $resCat['PriceCategoryName'];?></strong></span><br>
                                 <span>
                                 Category : <?php echo $resCat['PriceCategoryName'];?><br>
-                                Location : <?php echo $resEve['EventLocation'];?><br>
-                                Age Limit : <?php echo $resEve['AgeLimit'];
-                                ?>
+                                Location : <?php echo $resEve['EventLocation'];?>
                                 </span>
                             </div>
 
-                            <div class="col-4 mt-2 pt-5" style="font-size: 15px;">
+                            <div class="col-4 mt-2" style="font-size: 15px;">
                                 <span>Gates Open </span><br>
                                 <span><strong><?php echo date('h:i A', strtotime($resEve['StartDate'])); echo ", "; echo date('M d, Y', strtotime($resEve['StartDate']));?>,</strong></span>
                                 <br><br>
                                 <?php 
                                     echo $generator->getBarcode($rowBar['Barcode'], $generator::TYPE_CODE_128);
-                                    echo "<small>$rowBar[Barcode]</small>";
+                                    echo "<small class='mt-2'>$rowBar[Barcode]</small>";
                                 ?>
                                 </h6>
                             </div>

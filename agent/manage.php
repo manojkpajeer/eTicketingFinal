@@ -115,7 +115,8 @@
                                             ?>
                                             <a href="view-report.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $rowd6['OrderId'];?>"><i class="fa fa-clipboard"></i></a> | 
                                             <a href="view-ticket.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $rowd6['OrderId'];?>"><i class="fa fa-ticket"></i></a> | 
-                                            <a href="view-barcode.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $rowd6['OrderId'];?>"><i class="fa fa-barcode"></i></a>
+                                            <a href="view-barcode.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $rowd6['OrderId'];?>"><i class="fa fa-barcode"></i></a> |
+                                            <a href="view-qrcode.php?id=<?php echo $_GET['id'];?>&oid=<?php echo $rowd6['OrderId'];?>"><i class="fa fa-qrcode"></i></a>
                                             <?php
                                             
                                             echo "</td>";

@@ -18,6 +18,8 @@
             <!-- sidebar nav start -->
             <ul class="nav nav-pills nav-stacked custom-nav">
                 <li class="<?php if ($_SERVER['REQUEST_URI'] == '/agent/home.php'){ echo 'active'; }?>"><a href="index.php" ><i class="fa fa-tachometer"></i><span> Dashboard</span></a></li>
+                <li class="<?php if ($_SERVER['REQUEST_URI'] == '/agent/scan.php'){ echo 'active'; }?>"><a href="scan.php" ><i class="fa fa-tablet"></i><span> Manage Scan</span></a></li>
+                <li class="<?php if ($_SERVER['REQUEST_URI'] == '/agent/badge.php'){ echo 'active'; }?>"><a href="badge.php" ><i class="fa fa-id-badge"></i><span> Manage Badge</span></a></li>
                 <li class="menu-list <?php if ($_SERVER['REQUEST_URI'] == '/agent/profile.php' || $_SERVER['REQUEST_URI'] == '/agent/settings.php' || $_SERVER['REQUEST_URI'] == '/agent/account.php'){ echo 'active'; }?>">
                     <a href="#"><i class="fa fa-cog"></i>
                         <span>Settings <i class="lnr lnr-chevron-right"></i></span>
